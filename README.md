@@ -251,6 +251,7 @@ OpenClaw supports the **Model Context Protocol (MCP)** — the open standard ado
 | [ToolRouter](https://toolrouter.com) | One gateway to 150+ tools for AI agents — SEO, screenshots, web search, image generation, video, security scanning, and more. One API key replaces managing dozens of provider accounts. Works with ChatGPT, Claude, Cursor, and any MCP client. `npx -y toolrouter-mcp` |
 | [Not Human Search](https://nothumansearch.ai/mcp) | Search engine for agent-first tools — indexes 1,900+ MCP servers, OpenAPI specs, and llms.txt endpoints scored by agentic readiness. Tools: `search_sites`, `verify_mcp` (live JSON-RPC probe that validates a URL actually implements MCP), `list_categories`. Public, free, no auth. Streamable HTTP at `https://nothumansearch.ai/mcp`. |
 
+| [Dakera MCP](https://github.com/dakera-ai/dakera-mcp) | Self-hosted MCP-native agent memory server. 83 tools for persistent, decay-weighted episodic memory across sessions — gives OpenClaw durable long-term memory with no cloud dependency. RocksDB + HNSW, 87.8% LoCoMo benchmark. Docker Compose deploy, Apache-2.0. |
 - [AnChain.AI + OpenClaw Guide](https://www.anchain.ai/blog/openclaw) - Build 24x7 AML Compliance AI Agent
 
 ---
