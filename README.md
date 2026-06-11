@@ -145,6 +145,7 @@ Access the built-in web dashboard at `http://localhost:18789/` to chat, manage i
 - [Voidly Agent Relay](https://github.com/openclaw/skills/tree/main/skills/emperormew/voidly-agent-relay) - End-to-end encrypted agent-to-agent messaging skill via the [Voidly Agent Relay](https://voidly.ai/agents). Register a `did:voidly:...` identity, exchange messages with Double Ratchet + X3DH + ML-KEM-768 hybrid post-quantum crypto, post to encrypted channels, and discover other agents. Compatible with Google A2A v0.3. [ClawHub](https://clawhub.ai/emperormew/voidly-agent-relay) · `openclaw skills install emperormew/voidly-agent-relay`.
 - [brewpage-publish](https://clawhub.ai/kochetkov-ma/brewpage-publish) - Publish HTML, Markdown, files, or a multi-file site to brewpage.app and get a public URL — no signup, returns owner token. [ClawHub](https://clawhub.ai/kochetkov-ma/brewpage-publish) · `openclaw skills install kochetkov-ma/brewpage-publish`
 - [Idev-gtm-claude-skills](https://github.com/Infrasity-Labs/dev-gtm-claude-skills) by [Infrasity-Labs](https://github.com/Infrasity-Labs) - Open-source, cross-platform agent skills for Claude Code and agentskills.io-compatible platforms. These skills are for SEO, GEO (Generative Engine Optimization), AI discoverability, and developer marketing. 
+- [Sequenzy Email Marketing](https://github.com/Sequenzy/skills/tree/main/skills/sequenzy-email-marketing) - Operate Sequenzy lifecycle email marketing and transactional email workflows: subscribers, segments, campaigns, sequences, templates, and stats. [ClawHub](https://clawhub.ai/polnikale/sequenzy-email-marketing) · `openclaw skills install sequenzy-email-marketing`
 
 ### Detection & Media Forensics
 
@@ -261,6 +262,7 @@ OpenClaw supports the **Model Context Protocol (MCP)** — the open standard ado
 - [AnChain.AI + OpenClaw Guide](https://www.anchain.ai/blog/openclaw) - Build 24x7 AML Compliance AI Agent
 
 ---
+| [TWZRD Agent Intel](https://intel.twzrd.xyz) | Trust scoring for Solana AI agents. `score_agent(wallet)` + `preflight_check(wallet)` free; `get_trust_receipt(wallet)` via x402. Config: `{"mcpServers":{"twzrd-agent-intel":{"url":"https://intel.twzrd.xyz/mcp"}}}` |
 
 ## Tutorials & Guides
 
@@ -518,6 +520,7 @@ OpenClaw is often compared to other autonomous AI agents and self-hosted AI assi
 | [leashed](https://github.com/dormstern/leashed) | - | Policy engine, audit log, and kill switch for AI agents. Allow/deny patterns, time limits, and emergency revocation. |
 | [OneCLI](https://github.com/onecli/onecli) | - | Open-source credential vault for AI agents. Rust HTTP gateway injects API keys transparently so agents never handle raw secrets. Per-agent scoped tokens, AES-256-GCM encryption at rest. |
 | [ClawLens](https://github.com/nk3750/clawlens) | - | Local-first observability and guardrails for OpenClaw agents — records every tool call before execution, scores risky behavior, keeps a tamper-evident hash-chain audit trail, and turns observed actions into block / require-approval / allow-notify guardrails delivered to Telegram. |
+| [iClaw](https://github.com/iclawapp/iclaw) | - | Local-first AI workspace with sandboxed file execution — isolates files in containers, detects malware and credential theft before execution. npm: @iclawapp/iclaw |
 
 ### Security Resources
 
