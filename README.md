@@ -190,6 +190,7 @@ openclaw plugins install <npm-package>
 - [clawsocial-plugin](https://github.com/mrpeter2025/clawsocial-plugin) - Social discovery network — helps users find and connect with people who share their interests through their AI agent. Semantic matching, real-time messaging, profile cards, web inbox. Ready to use out of the box.
 - [OneQuery](https://github.com/wordbricks/onequery/tree/main/packages/openclaw-plugin) - CLI skill for safe, auditable queries for agents against approved data sources.
 
+- **[Context Kit](https://github.com/JDDavenport/context-kit)** — Personal Context Artifacts: 4 Markdown templates (wiki, mental-models, voice, protocols) + 5 Claude Code skills. Solves context amnesia — every session starts context-full. MIT, one-command install.
 ---
 
 ## Integrations
