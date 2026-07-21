@@ -110,6 +110,7 @@ Access the built-in web dashboard at `http://localhost:18789/` to chat, manage i
 | [SlackClaw](https://slackclaw.ai) | Managed Cloud | Managed OpenClaw hosting for Slack — credit-based pricing, per-channel permissions, audit logging, auto-updates. No per-seat fees. |
 | [RapidClaw](https://rapidclaw.dev) | Managed Cloud | Managed OpenClaw hosting for non-technical operators — zero terminal/Docker/SSH setup, deploys in minutes, opinionated defaults. |
 | [PrimeClaws](https://primeclaws.com) | Managed Cloud | Managed OpenClaw Hermes VPS hosting — one-click deploy in 60s, free GPT-5.4/Mistral Large 3/Kimi K2.5/Deepseek V3.2 included, auto-restart, SSH access, full privacy. |
+| [Agent37](https://agent37.com) | Managed Cloud | Managed OpenClaw hosting from $3.99/mo — browser task board, full web terminal, live Linux desktop, scheduled jobs, 1,000+ app integrations via Composio, BYOK keys go straight to the model provider, isolated container per instance |
 
 ---
 
@@ -374,6 +375,7 @@ A curated list of community-built projects, tools, and integrations for OpenClaw
 | [LightClaw](https://github.com/OthmaneBlial/lightclaw) | NEW | Lightweight OpenClaw-inspired Python agent core: Telegram-first, infinite memory, multi-LLM providers, ClawHub skills, and local agent delegation (`codex`/`claude`/`opencode`). |
 | [WaliGPT](https://waligpt.com) | NEW | One-click deployment platform for pre-configured OpenClaw agents. Ships with ready-to-deploy templates for crypto trading, Polymarket betting, Telegram alpha monitoring, Twitter automation, NFT tracking, Discord moderation, and more. Each agent runs on an isolated cloud instance — no DevOps required. |
 | [PrimeClaws](https://primeclaws.com) | NEW | Managed OpenClaw Hermes VPS hosting — one-click deploy in 60s, free GPT-5.4/Mistral Large 3/Kimi K2.5/Deepseek V3.2 included, auto-restart on crash, SSH access, full privacy with isolated containers. |
+| [openclaw-host-kit](https://github.com/agent37-platform/openclaw-host-kit) | - | Docker + Traefik kit for multi-tenant self-hosted OpenClaw — per-user isolated instances, HTTPS subdomains with wildcard SSL, password-protected web terminals, resource limits |
 
 ### Memory & Storage
 
