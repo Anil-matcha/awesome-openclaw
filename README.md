@@ -157,6 +157,7 @@ Access the built-in web dashboard at `http://localhost:18789/` to chat, manage i
 - [LinkedIn Skills](https://github.com/sergebulaev/linkedin-skills) - 10 MIT-licensed skills for LinkedIn content and engagement: post writer with 16 tested hook formulas, humanizer that strips AI tells, pre-publish audit, comment drafter, reply handler, hook extractor, content planner, profile optimizer, engager analytics, and thread monitor. Focused on writing in your own voice rather than API automation. All 10 skills on [ClawHub](https://clawhub.ai/sergebulaev); also runs in Claude Code and Codex. `clawhub install linkedin-post-writer`
 
 - [Sonar ASO](https://github.com/trysonar/skills) - App Store Optimization for AI agents — keyword research with difficulty & popularity scores, ASO audits, review mining, and revenue estimates for iOS & Google Play via the [Sonar](https://trysonar.app) API. [ClawHub](https://clawhub.ai/petersutarik/sonar-aso) · `openclaw skills install sonar-aso`
+- [MediWise Health Suite](https://github.com/JuneYaooo/mediwise-health-suite) - Family health management skill — health record keeping, diet tracking, weight management, medication reminders, and medical image recognition, all with local SQLite storage for privacy.
 
 ### Detection & Media Forensics
 
