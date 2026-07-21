@@ -110,6 +110,7 @@ Access the built-in web dashboard at `http://localhost:18789/` to chat, manage i
 | [SlackClaw](https://slackclaw.ai) | Managed Cloud | Managed OpenClaw hosting for Slack — credit-based pricing, per-channel permissions, audit logging, auto-updates. No per-seat fees. |
 | [RapidClaw](https://rapidclaw.dev) | Managed Cloud | Managed OpenClaw hosting for non-technical operators — zero terminal/Docker/SSH setup, deploys in minutes, opinionated defaults. |
 | [PrimeClaws](https://primeclaws.com) | Managed Cloud | Managed OpenClaw Hermes VPS hosting — one-click deploy in 60s, free GPT-5.4/Mistral Large 3/Kimi K2.5/Deepseek V3.2 included, auto-restart, SSH access, full privacy. |
+| [Agent37](https://agent37.com) | Managed Cloud | Managed OpenClaw hosting from $3.99/mo — browser task board, full web terminal, live Linux desktop, scheduled jobs, 1,000+ app integrations via Composio, BYOK keys go straight to the model provider, isolated container per instance |
 
 ---
 
@@ -140,16 +141,22 @@ Access the built-in web dashboard at `http://localhost:18789/` to chat, manage i
 - [Tubeify](https://tubeify.xyz) - AI video editor for YouTube — removes pauses, filler words and dead air from raw recordings via API, pay per video
 - [TweetClaw](https://github.com/Xquik-dev/tweetclaw) - OpenClaw plugin for X/Twitter automation - search tweets and tweet replies, post tweets, export followers, handle media workflows, monitor accounts, send webhooks, and run giveaway draws through Xquik. `openclaw plugins install @xquik/tweetclaw`
 - [x-twitter-scraper](https://github.com/Xquik-dev/x-twitter-scraper) - Xquik skill and API surface for X data workflows: tweet search, user lookup, follower/following exports, engagement metrics, account monitoring, extraction jobs, REST API, MCP server, SDKs, and webhooks.
+- [News API](https://github.com/currentslab/news-api-skills) - Install-ready `news-api` skill for OpenClaw and other agent runtimes, enabling secure latest-news and search across workflows.
 
 - [Useful AI](https://github.com/uAI-solana/useful-ai-skills) - Shared utility tool library for AI agents. Dispatch data tasks (parsing, normalization, validation, conversion) in plain English, get structured output. 200+ tools, auto-generated, no auth required. Skill file at usefulai.fun/skill.md.
 - [Northstar](https://github.com/Daveglaser0823/northstar-skill) - Daily business briefing skill for founders. Pulls Stripe, Shopify, Lemon Squeezy, and Gumroad metrics into a single morning summary via iMessage, Slack, Telegram, or Email. Free tier available. [ClawHub](https://clawhub.ai/Daveglaser0823/northstar)
 - [Resemble Detect](https://github.com/resemble-ai/detect-skill) - Deepfake detection and media safety for OpenClaw — detect AI-generated audio, images, video, and text; identify which AI platform synthesized fake audio (source tracing); apply invisible watermarks for provenance; verify speaker identity. Powered by [Resemble AI](https://resemble.ai). Install via `openclaw skills install resemble-ai/detect-skill`.
 - [Voidly Agent Relay](https://github.com/openclaw/skills/tree/main/skills/emperormew/voidly-agent-relay) - End-to-end encrypted agent-to-agent messaging skill via the [Voidly Agent Relay](https://voidly.ai/agents). Register a `did:voidly:...` identity, exchange messages with Double Ratchet + X3DH + ML-KEM-768 hybrid post-quantum crypto, post to encrypted channels, and discover other agents. Compatible with Google A2A v0.3. [ClawHub](https://clawhub.ai/emperormew/voidly-agent-relay) · `openclaw skills install emperormew/voidly-agent-relay`.
+- [tiny.place](https://github.com/tinyhumansai/tiny.place) - Agent-to-agent social network. The `tinyplace` CLI lets an agent claim an @handle identity, get discovered in an open directory, message peers over Signal end-to-end encryption, and transact in USDC and SOL on Solana via x402. By [TinyHumans](https://tinyhumans.ai). [ClawHub](https://clawhub.ai/tinyhumansai/tinyplace) · `clawhub install tinyplace`
 - [brewpage-publish](https://clawhub.ai/kochetkov-ma/brewpage-publish) - Publish HTML, Markdown, files, or a multi-file site to brewpage.app and get a public URL — no signup, returns owner token. [ClawHub](https://clawhub.ai/kochetkov-ma/brewpage-publish) · `openclaw skills install kochetkov-ma/brewpage-publish`
 - [dev-gtm-claude-skills](https://github.com/Infrasity-Labs/dev-gtm-claude-skills) by [Infrasity-Labs](https://github.com/Infrasity-Labs) - Open-source, cross-platform agent skills for Claude Code and agentskills.io-compatible platforms. These skills are for SEO, GEO (Generative Engine Optimization), AI discoverability, and developer marketing. 
 - [Sequenzy Email Marketing](https://github.com/Sequenzy/skills/tree/main/skills/sequenzy-email-marketing) - Operate Sequenzy lifecycle email marketing and transactional email workflows: subscribers, segments, campaigns, sequences, templates, and stats. [ClawHub](https://clawhub.ai/polnikale/sequenzy-email-marketing) · `openclaw skills install sequenzy-email-marketing`
 - [osint-mcp](https://github.com/snuri00/osint-mcp) - Self-hosted OSINT toolkit with 29 tools across entity (email, username, domain, IP, phone), event/news, social/community, and image-geolocation (EXIF + GeoCLIP) intelligence — plus link-graph visualization. Keyless-first, MCP-native. [ClawHub](https://clawhub.ai/snuri00/osint-mcp) · `openclaw skills install osint-mcp`
 - [novel-rpg-hogwarts](https://github.com/siegelmaik-sketch/novel-rpg-hogwarts) - Child-safe, story-driven Hogwarts RPG skill (German, ~age 12) — play your own character across seven school years. Ships a reusable child-safety layer: fail-closed output moderation (LLM/OpenAI/offline backends), age/tone hardening that player input can't override, a divergence cap, and persistent world-memory. Telegram frontend included. MIT, 45 tests, non-commercial fan project. [ClawHub](https://clawhub.ai/siegelmaik-sketch/hogwarts-rpg) · `clawhub install hogwarts-rpg`
+- [youtube-full](https://github.com/ZeroPointRepo/youtube-skills) - YouTube transcripts, video/channel search, channel browsing, and playlist extraction via TranscriptAPI. No yt-dlp, works from any cloud server. `npx skills add ZeroPointRepo/youtube-skills --skill youtube-full`
+- [LinkedIn Skills](https://github.com/sergebulaev/linkedin-skills) - 10 MIT-licensed skills for LinkedIn content and engagement: post writer with 16 tested hook formulas, humanizer that strips AI tells, pre-publish audit, comment drafter, reply handler, hook extractor, content planner, profile optimizer, engager analytics, and thread monitor. Focused on writing in your own voice rather than API automation. All 10 skills on [ClawHub](https://clawhub.ai/sergebulaev); also runs in Claude Code and Codex. `clawhub install linkedin-post-writer`
+
+- [Sonar ASO](https://github.com/trysonar/skills) - App Store Optimization for AI agents — keyword research with difficulty & popularity scores, ASO audits, review mining, and revenue estimates for iOS & Google Play via the [Sonar](https://trysonar.app) API. [ClawHub](https://clawhub.ai/petersutarik/sonar-aso) · `openclaw skills install sonar-aso`
 
 ### Detection & Media Forensics
 
@@ -236,6 +243,8 @@ openclaw plugins install <npm-package>
 
 OpenClaw supports the **Model Context Protocol (MCP)** — the open standard adopted by Anthropic, OpenAI, Google DeepMind, and the Linux Foundation — giving your agent access to a growing ecosystem of 13,000+ MCP servers.
 
+- [llm-box](https://github.com/alib8b8/openclaw-llmbox) - Invoke llm-box workflows as callable tools in OpenClaw conversations. Supports 20+ LLM providers with YAML-driven pipelines. `openclaw plugins install alib8b8/openclaw-llmbox`
+
 ### MCP Resources
 
 - [MCP Adapter Plugin](https://github.com/androidStern-personal/openclaw-mcp-adapter) - Expose MCP tools as native agent tools
@@ -261,6 +270,7 @@ OpenClaw supports the **Model Context Protocol (MCP)** — the open standard ado
 | [x-twitter-scraper](https://github.com/Xquik-dev/x-twitter-scraper) | Xquik skill and API surface for X data workflows. Supports tweet search, user lookup, follower/following exports, engagement metrics, account monitoring, extraction jobs, REST API, MCP server, SDKs, and webhooks. |
 | [RunAPI MCP](https://github.com/runapi-ai/mcp) | 130+ AI models for image, video, music, audio, and LLM from 18 providers. 8 MCP tools with free catalog browsing. npm: `@runapi.ai/mcp` |
 | [ToolRouter](https://toolrouter.com) | One gateway to 150+ tools for AI agents — SEO, screenshots, web search, image generation, video, security scanning, and more. One API key replaces managing dozens of provider accounts. Works with ChatGPT, Claude, Cursor, and any MCP client. `npx -y toolrouter-mcp` |
+| [BuyWhere MCP](https://github.com/BuyWhere/buywhere-mcp) | Product catalog and price comparison API for AI shopping agents. Search 200M+ products across Amazon, Lazada, Shopee, and more. Free tier, no API key required. `npm install @buywhere/mcp-server` |
 | [Not Human Search](https://nothumansearch.ai/mcp) | Search engine for agent-first tools — indexes 1,900+ MCP servers, OpenAPI specs, and llms.txt endpoints scored by agentic readiness. Tools: `search_sites`, `verify_mcp` (live JSON-RPC probe that validates a URL actually implements MCP), `list_categories`. Public, free, no auth. Streamable HTTP at `https://nothumansearch.ai/mcp`. |
 | [ejentum-mcp](https://github.com/ejentum/ejentum-mcp) | MCP server exposing four cognitive harness tools (`harness_reasoning`, `harness_code`, `harness_anti_deception`, `harness_memory`) OpenClaw agents call before generating. Each tool returns a structured prompt: a named failure pattern, an executable procedure, suppression vectors that block common shortcuts, and a falsification test for self-verification. Targets hallucinated APIs, sycophantic capitulation, false-confidence validation, and cross-turn drift on long agentic sessions. Two install paths: stdio via `npx -y ejentum-mcp`, or hosted HTTPS at `https://api.ejentum.com/mcp`. Requires `EJENTUM_API_KEY` (free tier at ejentum.com), MIT, listed on the Official MCP Registry as `io.github.ejentum/ejentum-mcp`. |
 | [DOS Kernel](https://github.com/anthony-chaudhary/dos-kernel) | Deterministic trust kernel for agent fleets — verification tools the agent cannot argue with: `dos_verify` checks a "done" claim against git evidence instead of self-report, `dos_arbitrate` stops two agents colliding on the same files, `dos_commit_audit` flags a commit whose message contradicts its own diff. Python, MIT, no API key. `openclaw mcp add dos --command dos-mcp` after `pip install "dos-kernel[mcp]"`. Listed on the Official MCP Registry. |
@@ -312,6 +322,10 @@ OpenClaw supports the **Model Context Protocol (MCP)** — the open standard ado
 ### Security Analysis
 
 - [What Security Teams Need to Know](https://www.crowdstrike.com/en-us/blog/what-security-teams-need-to-know-about-openclaw-ai-super-agent/) - CrowdStrike
+
+### Research & Surveys
+
+- [OpenClaw as Language Infrastructure: A Case-Centered Survey of a Public Agent Ecosystem in the Wild](https://www.preprints.org/manuscript/202603.1060) - Preprints.org · academic survey of the OpenClaw ecosystem across Platform, Security, Societies, and Deployment
 
 ---
 
@@ -374,6 +388,7 @@ A curated list of community-built projects, tools, and integrations for OpenClaw
 | [LightClaw](https://github.com/OthmaneBlial/lightclaw) | NEW | Lightweight OpenClaw-inspired Python agent core: Telegram-first, infinite memory, multi-LLM providers, ClawHub skills, and local agent delegation (`codex`/`claude`/`opencode`). |
 | [WaliGPT](https://waligpt.com) | NEW | One-click deployment platform for pre-configured OpenClaw agents. Ships with ready-to-deploy templates for crypto trading, Polymarket betting, Telegram alpha monitoring, Twitter automation, NFT tracking, Discord moderation, and more. Each agent runs on an isolated cloud instance — no DevOps required. |
 | [PrimeClaws](https://primeclaws.com) | NEW | Managed OpenClaw Hermes VPS hosting — one-click deploy in 60s, free GPT-5.4/Mistral Large 3/Kimi K2.5/Deepseek V3.2 included, auto-restart on crash, SSH access, full privacy with isolated containers. |
+| [openclaw-host-kit](https://github.com/agent37-platform/openclaw-host-kit) | - | Docker + Traefik kit for multi-tenant self-hosted OpenClaw — per-user isolated instances, HTTPS subdomains with wildcard SSL, password-protected web terminals, resource limits |
 
 ### Memory & Storage
 
@@ -425,6 +440,7 @@ A curated list of community-built projects, tools, and integrations for OpenClaw
 | [OpenClaw Setup Cost Calculator](https://guardclaw.dev/calculator) | 2 (New) | Free, open-source cost estimator for OpenClaw setups. Paste your config, get daily/monthly/per-message/yearly cost breakdown by model, heartbeat, fallback, and multi-agent. |
 | [OpenClaw Model Picker](https://guardclaw.dev/picker) | 1 (New) | Free, open-source. Answer 5 questions about your use case and get a recommended primary and fallback model stack with a paste-ready config snippet. |
 | [Claw Lens](https://github.com/msfirebird/claw-lens) | NEW | Open-source local dashboard for OpenClaw — cost analytics, live monitoring, session inspection, profiler, cache trace, and security audit. |
+| [ClawStat.us](https://clawstat.us) | NEW | Automated, evidence-backed verdict on whether to update to the latest OpenClaw release — scouts post-release bug reports, scores them from the repo's own severity labels, and has two independent LLMs cross-check the call. Free, open source, with a JSON API and an `llms.txt` mirror for agents. [Source](https://github.com/camilla-oclm/openclaw_status_app) |
 
 ### Trading & Finance
 
@@ -493,11 +509,14 @@ OpenClaw is often compared to other autonomous AI agents and self-hosted AI assi
 | [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | Open Source | Autonomous task execution |
 | [Open Interpreter](https://github.com/OpenInterpreter/open-interpreter) | Open Source | Terminal-based code execution |
 | [Claude Code](https://claude.ai/code) | Proprietary | Developer coding assistance |
+| [Tura](https://github.com/Tura-AI/tura) | Open Source | Local open-source coding agent that understands a repository before changing it |
 | [claw-army/claude-node](https://github.com/claw-army/claude-node) | Open Source | Python subprocess bridge for Claude Code CLI, giving Python code direct access to Claude Code native capabilities via stream-json |
 | [Jan.ai](https://jan.ai/) | Open Source | Privacy-focused, fully offline |
 | [Agent Zero](https://github.com/frdel/agent-zero) | Open Source | Fully local autonomous agent |
 | [Hermes Agent](https://github.com/NousResearch/hermes-agent) | Open Source | Self-evolving agent with closed learning loop; 18 messaging platforms, 7 backends — includes a native OpenClaw migration path. See [awesome-hermes-agent](https://github.com/SamurAIGPT/awesome-hermes-agent) |
+| [OpenHuman](https://github.com/tinyhumansai/openhuman) | Open Source | Desktop AI assistant for communities; Tauri + Rust core, multi-channel messaging, knowledge-graph memory, skills, voice, and local or cloud LLM routing |
 | [Khoj](https://github.com/khoj-ai/khoj) | Open Source | Open-source personal AI |
+| [Hivekeep](https://github.com/MarlBurroW/hivekeep) | Open Source | Self-hosted team of AI agents with persistent memory, web UI, Telegram/Slack/Discord/Matrix |
 | [eesel AI](https://eesel.ai/) | SaaS | Business customer service |
 
 ### Comparison Resources
@@ -530,6 +549,7 @@ OpenClaw is often compared to other autonomous AI agents and self-hosted AI assi
 | [leashed](https://github.com/dormstern/leashed) | - | Policy engine, audit log, and kill switch for AI agents. Allow/deny patterns, time limits, and emergency revocation. |
 | [OneCLI](https://github.com/onecli/onecli) | - | Open-source credential vault for AI agents. Rust HTTP gateway injects API keys transparently so agents never handle raw secrets. Per-agent scoped tokens, AES-256-GCM encryption at rest. |
 | [Armorer Guard](https://github.com/ArmorerLabs/Armorer-Guard) | - | Local Rust scanner and MCP proxy for AI-agent prompt injection, credential leakage, exfiltration, and risky tool-call arguments before execution. |
+| [OpenClaw VPS Security Preflight](https://github.com/tinyopsstudio/openclaw-vps-security-preflight) | - | Free browser checklist and optional read-only Linux audit for gateway bind/auth, listeners, SSH, firewall, service hardening, updates, and time sync. No telemetry or host changes. |
 | [ClawLens](https://github.com/nk3750/clawlens) | - | Local-first observability and guardrails for OpenClaw agents — records every tool call before execution, scores risky behavior, keeps a tamper-evident hash-chain audit trail, and turns observed actions into block / require-approval / allow-notify guardrails delivered to Telegram. |
 | [iClaw](https://github.com/iclawapp/iclaw) | - | Local-first AI workspace with sandboxed file execution — isolates files in containers, detects malware and credential theft before execution. npm: @iclawapp/iclaw |
 | [trentclaw](https://github.com/trnt-ai/trent-openclaw-security-assessment) | - | Security assessment skill for OpenClaw — scans gateway config, installed skills, tool permissions, and MCP servers, finds chained attack paths, and returns prioritized findings with proposed fixes inside your OpenClaw session. [ClawHub](https://clawhub.ai/trent-ai-release/trentclaw) · `clawhub install trentclaw` |
