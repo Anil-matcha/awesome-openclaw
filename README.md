@@ -61,6 +61,7 @@ OpenClaw is a **self-hosted, open-source AI agent** that acts as your personal A
 - [AgentFund](https://github.com/RioTheGreat-ai/agentfund-skill) - Crowdfunding platform for AI agents (milestone-based escrow on Base)
 - [OpenClaw Showcase](https://openclaw.ai/showcase) - What people are building
 - [OpenClaw Releases](https://github.com/openclaw/openclaw/releases) - Latest releases
+- [Darkmoon](https://github.com/ASCIT31/Dark-Moon) - Open source (GPL-3.0) autonomous AI pentest platform and MCP host, covering web, API, Active Directory and Kubernetes, with proof of exploitation.
 - [AGENTS.md](https://github.com/openclaw/openclaw/blob/main/AGENTS.md) - Agent configuration guide
 - [CHANGELOG.md](https://github.com/openclaw/openclaw/blob/main/CHANGELOG.md) - Release notes
 
