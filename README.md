@@ -152,6 +152,8 @@ Access the built-in web dashboard at `http://localhost:18789/` to chat, manage i
 - [osint-mcp](https://github.com/snuri00/osint-mcp) - Self-hosted OSINT toolkit with 29 tools across entity (email, username, domain, IP, phone), event/news, social/community, and image-geolocation (EXIF + GeoCLIP) intelligence — plus link-graph visualization. Keyless-first, MCP-native. [ClawHub](https://clawhub.ai/snuri00/osint-mcp) · `openclaw skills install osint-mcp`
 - [novel-rpg-hogwarts](https://github.com/siegelmaik-sketch/novel-rpg-hogwarts) - Child-safe, story-driven Hogwarts RPG skill (German, ~age 12) — play your own character across seven school years. Ships a reusable child-safety layer: fail-closed output moderation (LLM/OpenAI/offline backends), age/tone hardening that player input can't override, a divergence cap, and persistent world-memory. Telegram frontend included. MIT, 45 tests, non-commercial fan project. [ClawHub](https://clawhub.ai/siegelmaik-sketch/hogwarts-rpg) · `clawhub install hogwarts-rpg`
 
+- [Sonar ASO](https://github.com/trysonar/skills) - App Store Optimization for AI agents — keyword research with difficulty & popularity scores, ASO audits, review mining, and revenue estimates for iOS & Google Play via the [Sonar](https://trysonar.app) API. [ClawHub](https://clawhub.ai/petersutarik/sonar-aso) · `openclaw skills install sonar-aso`
+
 ### Detection & Media Forensics
 
 Skills for verifying whether incoming media is real or AI-generated — essential for agents that ingest user-submitted audio, images, video, or text.
