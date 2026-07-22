@@ -296,6 +296,7 @@ OpenClaw supports the **Model Context Protocol (MCP)** — the open standard ado
 | [Complete Installation Guide](https://www.aifreeapi.com/en/posts/openclaw-installation-guide) | AI Free API | WhatsApp, Telegram, Discord setup |
 | [ClawPath](https://clawpath.dev) | Community | Chinese & English onboarding guide — install, channel, skills, security in 30 min |
 | [Install OpenClaw Guide](https://install-openclaw.net) | install-openclaw.net | Step-by-step VPS & local setup guides, Telegram/VPS install tutorials |
+| [Clawdbot](https://clawdbot.tech/) | Community | Multilingual (EN / 中文 / 日本語 / 한국어 / Español) deployment archive — 30+ guides on Docker, VPS, NAS, security whitepaper, and full rename history |
 
 ### Advanced
 
