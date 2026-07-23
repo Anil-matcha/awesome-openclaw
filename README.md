@@ -519,6 +519,7 @@ OpenClaw is often compared to other autonomous AI agents and self-hosted AI assi
 | [Agent Zero](https://github.com/frdel/agent-zero) | Open Source | Fully local autonomous agent |
 | [Hermes Agent](https://github.com/NousResearch/hermes-agent) | Open Source | Self-evolving agent with closed learning loop; 18 messaging platforms, 7 backends — includes a native OpenClaw migration path. See [awesome-hermes-agent](https://github.com/SamurAIGPT/awesome-hermes-agent) |
 | [OpenHuman](https://github.com/tinyhumansai/openhuman) | Open Source | Desktop AI assistant for communities; Tauri + Rust core, multi-channel messaging, knowledge-graph memory, skills, voice, and local or cloud LLM routing |
+| [Orkas](https://orkas.ai?source=gh_openclaw) | Open Source | Local-first multi-agent desktop workspace; OpenClaw can run as a CLI backend alongside Claude Code, Codex, OpenCode, and Cline. [Source](https://github.com/Orkas-AI/Orkas) |
 | [Khoj](https://github.com/khoj-ai/khoj) | Open Source | Open-source personal AI |
 | [Hivekeep](https://github.com/MarlBurroW/hivekeep) | Open Source | Self-hosted team of AI agents with persistent memory, web UI, Telegram/Slack/Discord/Matrix |
 | [eesel AI](https://eesel.ai/) | SaaS | Business customer service |
