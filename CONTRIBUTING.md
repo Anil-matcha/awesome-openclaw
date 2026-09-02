@@ -4,6 +4,11 @@ Thanks for adding a tool. This catalog stays useful only if every entry reflects
 a real, working API — so the bar is: **could a stranger read this file and
 successfully call the tool on the first try, with no other docs open?**
 
+**This guide covers `providers/*.yaml` only.** `models/*.yaml` (muapi's own hosted
+models) is auto-generated from muapi's live catalog and isn't a PR target — see
+the README's "muapi-hosted models" section. If you want a model added there or
+think one is wrong, open an issue instead of a PR.
+
 ## Before you start
 
 - Do you have a real (even free-tier) key for this provider? You'll need one —
