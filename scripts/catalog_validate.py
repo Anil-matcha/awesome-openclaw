@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
-"""Validate one or more providers/*.yaml catalog entries.
+"""Validate one or more catalog entries.
+
+Two entry kinds, opposite disclosure rules:
+
+- providers/<provider>.yaml — a community-submitted third-party tool, called with
+  the CONTRIBUTOR'S OWN key. Must fully disclose base_url/auth/endpoints.
+- models/<name>.yaml — one of muapi's own hosted models/APIs, called through your
+  muapi key. Must NEVER disclose the internal routing vendor muapi uses to serve
+  it (base_url, auth details, or a known vendor name) — see INTERNAL_VENDOR_NAMES.
 
 Usage:
     python3 scripts/catalog_validate.py providers/hunter.yaml
-    python3 scripts/catalog_validate.py providers/*.yaml   # CI runs it over every changed file
+    python3 scripts/catalog_validate.py models/some-model.yaml
+    python3 scripts/catalog_validate.py providers/*.yaml models/*.yaml
 """
 import re
 import sys
@@ -14,13 +23,10 @@ try:
 except ImportError:
     sys.exit("Missing dependency: pip install pyyaml")
 
-REQUIRED_TOP = ["provider", "docs_url", "status", "auth", "pricing", "endpoints", "base_url"]
-REQUIRED_AUTH = ["location", "format", "bad_key_behavior"]
-REQUIRED_PRICING = ["model", "source_url", "checked"]
-REQUIRED_ENDPOINT = ["id", "method", "path", "summary"]
-VALID_STATUS = {"draft", "verified"}
-VALID_AUTH_LOCATION = {"header", "query", "path"}
-ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*\.[a-z0-9][a-z0-9-]*$")
+# ---- shared ----
+
+VALID_STATUS_PROVIDER = {"draft", "verified"}
+VALID_STATUS_MODEL = {"live"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 # Secrets that look like real keys, not placeholder text. Tuned loosely on purpose —
@@ -33,6 +39,14 @@ SECRET_PATTERNS = [
     re.compile(r"(?i)(api[_-]?key|secret|token)\s*[:=]\s*['\"][A-Za-z0-9_\-]{16,}['\"]"),
 ]
 PLACEHOLDER_HINTS = {"{key}", "your-key", "your_api_key", "xxxx", "example", "changeme", "<key>"}
+
+# muapi's internal routing/infra vendors. These must NEVER appear in a models/*.yaml
+# entry (or anywhere else in this repo) — that's muapi's own procurement layer, not
+# part of any model's public identity. Hard CI failure, no exceptions.
+INTERNAL_VENDOR_NAMES = re.compile(
+    r"(?i)\brunware\b|\bwavespeed\b|\bkie\b|kie\.ai|\bpoyo\b|\bkinovi\b|\bapimart\b|"
+    r"\bpiapi\b|\bseegen\b|\btoapis?\b|\bfal\.(ai|run|media)\b"
+)
 
 
 def fail(errors, msg):
@@ -48,20 +62,18 @@ def check_secrets(raw_text, errors):
             fail(errors, f"possible real secret matched pattern {pat.pattern!r}: {token[:12]}...")
 
 
-def validate_entry(path):
-    errors = []
-    raw_text = path.read_text()
-    check_secrets(raw_text, errors)
+# ---- providers/*.yaml (community third-party tools, full disclosure) ----
 
-    try:
-        data = yaml.safe_load(raw_text)
-    except yaml.YAMLError as e:
-        return [f"invalid YAML: {e}"]
+REQUIRED_TOP_PROVIDER = ["provider", "docs_url", "status", "auth", "pricing", "endpoints", "base_url"]
+REQUIRED_AUTH = ["location", "format", "bad_key_behavior"]
+REQUIRED_PRICING = ["model", "source_url", "checked"]
+REQUIRED_ENDPOINT = ["id", "method", "path", "summary"]
+VALID_AUTH_LOCATION = {"header", "query", "path"}
+ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*\.[a-z0-9][a-z0-9-]*$")
 
-    if not isinstance(data, dict):
-        return ["top-level document must be a mapping"]
 
-    for field in REQUIRED_TOP:
+def validate_provider(path, data, errors):
+    for field in REQUIRED_TOP_PROVIDER:
         if field not in data:
             fail(errors, f"missing required top-level field: {field}")
 
@@ -70,8 +82,8 @@ def validate_entry(path):
         if path.stem != expected:
             fail(errors, f"filename {path.stem}.yaml does not match provider: {expected}")
 
-    if data.get("status") not in VALID_STATUS and "status" in data:
-        fail(errors, f"status must be one of {VALID_STATUS}, got {data.get('status')!r}")
+    if "status" in data and data.get("status") not in VALID_STATUS_PROVIDER:
+        fail(errors, f"status must be one of {VALID_STATUS_PROVIDER}, got {data.get('status')!r}")
 
     auth = data.get("auth") or {}
     for field in REQUIRED_AUTH:
@@ -109,6 +121,64 @@ def validate_entry(path):
         if not example_path.exists():
             fail(errors, f"status: verified requires a captured example at {example_path}")
 
+
+# ---- models/*.yaml (muapi's own hosted models, routing vendor never disclosed) ----
+
+REQUIRED_TOP_MODEL = ["id", "capability", "via", "title", "description", "docs_url", "status"]
+FORBIDDEN_MODEL_FIELDS = ["base_url", "auth", "provider_name", "query_task_url", "adapter", "field_map", "endpoints"]
+MODEL_ID_RE = re.compile(r"^muapi\.[a-z0-9][a-z0-9.-]*$")
+
+
+def validate_model(path, data, errors):
+    for field in REQUIRED_TOP_MODEL:
+        if field not in data:
+            fail(errors, f"missing required top-level field: {field}")
+
+    for field in FORBIDDEN_MODEL_FIELDS:
+        if field in data:
+            fail(errors, f"models/*.yaml must never include {field!r} — that's internal routing detail")
+
+    mid = data.get("id")
+    if mid and not MODEL_ID_RE.match(mid):
+        fail(errors, f"id {mid!r} must look like muapi.<name>")
+
+    if data.get("via") and data["via"] != "muapi":
+        fail(errors, "via must be 'muapi' for models/*.yaml (called through your own muapi key)")
+
+    if "status" in data and data.get("status") not in VALID_STATUS_MODEL:
+        fail(errors, f"models/*.yaml status must be one of {VALID_STATUS_MODEL}, got {data.get('status')!r}")
+
+    docs_url = data.get("docs_url") or ""
+    if docs_url and "muapi.ai" not in docs_url:
+        fail(errors, f"docs_url for a models/*.yaml entry should point at muapi.ai, got {docs_url!r}")
+
+
+# ---- shared entry point ----
+
+def validate_entry(path):
+    errors = []
+    raw_text = path.read_text()
+    check_secrets(raw_text, errors)
+
+    leak = INTERNAL_VENDOR_NAMES.search(raw_text)
+    if leak:
+        fail(errors, f"internal routing-vendor name leaked: {leak.group(0)!r} — this must never appear in this repo")
+
+    try:
+        data = yaml.safe_load(raw_text)
+    except yaml.YAMLError as e:
+        return [f"invalid YAML: {e}"]
+
+    if not isinstance(data, dict):
+        return ["top-level document must be a mapping"]
+
+    if path.parent.name == "providers":
+        validate_provider(path, data, errors)
+    elif path.parent.name == "models":
+        validate_model(path, data, errors)
+    else:
+        fail(errors, f"unrecognized entry location: {path} (expected providers/ or models/)")
+
     return errors
 
 
@@ -120,7 +190,7 @@ def main(argv):
     any_failed = False
     for arg in argv:
         path = Path(arg)
-        if path.name == "_TEMPLATE.yaml":
+        if path.name in ("_TEMPLATE.yaml", ".gitkeep"):
             continue
         if not path.exists():
             print(f"SKIP {arg}: not found")
