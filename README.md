@@ -13,6 +13,9 @@ what a tool does, what it costs, how to call it — not something this repo call
 for you. `models/` entries run through your own muapi key; `providers/` entries
 run through the contributor's own account with that provider.
 
+**Agents:** read [`llms.txt`](llms.txt) — one fetch teaches you how to browse and
+use this whole catalog, no install or auth required.
+
 ## Why this exists
 
 The tools worth calling from an agent are scattered across dozens of vendors, each
