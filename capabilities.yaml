@@ -1,0 +1,39 @@
+# Shared capability taxonomy for the catalog. Pick the closest existing capability
+# when tagging a new endpoint; propose a new one in your PR description if nothing fits.
+
+seo:
+  - seo.serp
+  - seo.backlinks
+  - seo.keyword_research
+  - seo.rank_track
+  - seo.domain_overview
+  - seo.site_audit
+  - seo.local_listings
+
+people:
+  - people.email_find
+  - people.email_verify
+  - people.enrich
+
+company:
+  - company.enrich
+  - company.firmographics
+
+social:
+  - social.publish
+  - social.analytics
+  - social.trends
+
+scraping:
+  - scraping.web
+  - scraping.social
+
+ads:
+  - ads.management
+  - ads.creative
+  - ads.measurement
+
+market_data:
+  - market_data.stocks
+  - market_data.crypto
+  - market_data.fx

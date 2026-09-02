@@ -1,0 +1,43 @@
+name: catalog-ci
+
+on:
+  pull_request:
+    paths:
+      - "providers/**"
+      - "scripts/**"
+  push:
+    branches: [main]
+    paths:
+      - "providers/**"
+      - "scripts/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Validate changed provider entries
+        run: |
+          set -e
+          files=$(git diff --name-only origin/main...HEAD -- 'providers/*.yaml' || true)
+          if [ -z "$files" ]; then
+            echo "No provider files changed."
+            exit 0
+          fi
+          echo "$files"
+          python3 scripts/catalog_validate.py $files
+
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
