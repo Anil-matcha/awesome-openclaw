@@ -4,7 +4,7 @@
 
 **OpenClaw** (formerly Moltbot, originally Clawdbot) is a free and open-source autonomous AI agent created by Peter Steinberger. It runs locally on your machine, connects to 50+ integrations, and lets you chat with AI through WhatsApp, Telegram, Discord, Signal, iMessage, and more — no subscription required.
 
-**See also:** [awesome-hermes-agent](https://github.com/Anil-matcha/awesome-hermes-agent) — curated resources for Hermes Agent (Nous Research), the most common upgrade path from OpenClaw with a native `hermes claw migrate` command. [awesome-deepseek-harness](https://github.com/Anil-matcha/awesome-deepseek-harness) — curated resources for DeepSeek Harness (`dsh`), another everything-is-a-plugin agent with a large community plugin ecosystem.
+**See also:** [awesome-hermes-agent](https://github.com/Anil-matcha/awesome-hermes-agent) — curated resources for Hermes Agent (Nous Research), the most common upgrade path from OpenClaw with a native `hermes claw migrate` command. [awesome-deepseek-harness](https://github.com/Anil-matcha/awesome-deepseek-harness) — curated resources for DeepSeek Harness (`dsh`), another everything-is-a-plugin agent with a large community plugin ecosystem. [awesome-muse-bot](https://github.com/Anil-matcha/awesome-muse-bot) — copy-paste Muse agent briefs for connected-app workflows and approval-aware automation.
 
 [![GitHub stars](https://img.shields.io/github/stars/openclaw/openclaw?style=social)](https://github.com/openclaw/openclaw)
 
