@@ -456,7 +456,7 @@ A curated list of community-built projects, tools, and integrations for OpenClaw
 |---------|-------|-------------|
 | [Manifest](https://github.com/mnfst/manifest) | 3.3k | Real-time cost observability for OpenClaw agents — track tokens, costs, messages, and model usage with a local-first dashboard. Supports 28+ LLM models. [Website](https://manifest.build) |
 | [crabwalk](https://github.com/monitoring/crabwalk) | 683 | Real-time companion monitor for OpenClaw |
-| [OpenClaw Monitor](https://github.com/flik2002/openclaw-monitor) | ⭐ | Real-time AI agent monitoring dashboard — tracks Gateway status, session metrics, token usage, and message trends. Vue 3 + ECharts, self-hosted. |
+| [OpenClaw Monitor](https://github.com/flik2002/openclaw-monitor) | 13 | Real-time AI agent monitoring dashboard — tracks Gateway status, session metrics, token usage, and message trends. Vue 3 + ECharts, self-hosted. |
 | [opik-openclaw](https://github.com/comet-ml/opik-openclaw) | 50 | OpenClaw plugin for trace-level observability in Opik. See LLM spans, tool calls, sub-agent spans, usage, and cost metadata. Setup alerts and catch issues with your claw. |
 | [clawmetrics](https://github.com/observability/clawmetrics) | - | Prometheus metrics exporter |
 | [openclaw-logs](https://github.com/logging/openclaw-logs) | - | Structured logging plugin |
