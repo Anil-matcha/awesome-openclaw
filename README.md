@@ -119,6 +119,7 @@ Access the built-in web dashboard at `http://localhost:18789/` to chat, manage i
 | [PrimeClaws](https://primeclaws.com) | Managed Cloud | Managed OpenClaw Hermes VPS hosting — one-click deploy in 60s, free GPT-5.4/Mistral Large 3/Kimi K2.5/Deepseek V3.2 included, auto-restart, SSH access, full privacy. |
 | [Agent37](https://agent37.com) | Managed Cloud | Managed OpenClaw hosting from $3.99/mo — browser task board, full web terminal, live Linux desktop, scheduled jobs, 1,000+ app integrations via Composio, BYOK keys go straight to the model provider, isolated container per instance |
 | [Molted](https://www.molted.net) | Managed Cloud | Managed OpenClaw fleet hosting for teams and agencies: auto-healing (crash detection under 60s, recovery under 90s, post-mortem per failure), versioned files with point-in-time restore, per-agent email/phone/browser automation, 1,000+ integrations, per-instance-per-day pricing |
+| [Clawployees](https://clawployees.com) | Managed Cloud | Fully managed OpenClaw agents for business: hire an agent by role, connect email, Slack, Telegram or Google Workspace, with approval rules before anything sends. From $29/mo. |
 
 ---
 
